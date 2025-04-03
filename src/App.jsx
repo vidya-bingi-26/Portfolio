@@ -7,6 +7,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import Achievements from "./components/Achievements";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ function App() {
           <main>
             <Hero />
             <Projects />
+            <Achievements />
             <About />
             <Contact />
           </main>

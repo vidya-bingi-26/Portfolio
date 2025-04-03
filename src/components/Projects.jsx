@@ -40,7 +40,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-24 bg-neutral-950">
-      <div className="container mx-auto px-6">
+      {/* <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
@@ -141,6 +141,24 @@ const Projects = () => {
               />
             </svg>
           </a>
+        </motion.div>
+      </div> */}
+      <div className="container mx-auto px-6">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            My <span className="text-indigo-400">Projects</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mb-6"></div>
+          <p className="text-neutral-300 max-w-2xl">
+            I'm in the process of organizing and uploading my projects to
+            GitHub. Meanwhile, feel free to explore my skills and experience!
+          </p>
         </motion.div>
       </div>
     </section>

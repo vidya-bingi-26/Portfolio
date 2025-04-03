@@ -55,26 +55,28 @@ const About = () => {
               About <span className="text-indigo-400">Me</span>
             </h2>
 
-            <div className="prose prose-invert max-w-none mb-10">
+            <div className="prose prose-invert max-w-none mb-10 text-gray-400">
               <p className="text-lg mb-4">
-                I'm a passionate digital designer and developer with over 5
-                years of experience creating immersive digital experiences that
-                blend aesthetic appeal with technical excellence.
+                I'm a passionate Full Stack Developer currently pursuing my
+                Third Year of B.Tech at MITAOE. With a strong expertise in
+                frontend development, I craft seamless and engaging user
+                experiences that merge aesthetics with performance.
               </p>
               <p className="text-lg mb-4">
-                My approach combines user-centered design principles with
-                cutting-edge development techniques to deliver solutions that
-                are not only visually stunning but also highly functional and
-                accessible.
+                While frontend is my forte, I also have hands-on experience with
+                backend development, AI/ML, and AWS cloud fundamentals, allowing
+                me to build scalable and intelligent web solutions. I believe in
+                leveraging technology to solve real-world problems and enhance
+                user interaction.
               </p>
               <p className="text-lg">
-                When I'm not crafting digital experiences, you can find me
-                exploring new design trends, contributing to open-source
-                projects, or hiking in the mountains.
+                Beyond coding, I stay updated with emerging tech trends,
+                contribute to innovative projects, and enjoy pushing my
+                boundaries to build something impactful.
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 mb-12">
+            {/* <div className="grid grid-cols-3 gap-4 mb-12">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -89,7 +91,7 @@ const About = () => {
                   <p className="text-sm text-neutral-400">{stat.label}</p>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
 
             <div className="space-y-4">
               {skills.map((skill, index) => (

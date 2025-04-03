@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import myimage from "../assets/images/formal_photo_vidya.jpg";
+import resume from "../assets/files/Resume.pdf";
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -25,6 +26,7 @@ const Hero = () => {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       className="relative h-screen flex items-center justify-between overflow-hidden bg-neutral-950 px-12"
+      id="hero"
     >
       {/* Dynamic gradient background */}
       <div
@@ -115,7 +117,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="/resume.pdf"
+              href={resume}
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 relative group"

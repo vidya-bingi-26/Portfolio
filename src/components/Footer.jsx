@@ -44,7 +44,6 @@ const Footer = () => {
                     </svg>
                   ),
                 },
-                
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -68,17 +67,28 @@ const Footer = () => {
                 Navigation
               </h4>
               <ul className="space-y-2">
-                {["Home", "Projects", "About", "Contact"].map((item, index) => (
+                {[
+                  { name: "Home", section: "hero" },
+                  { name: "Projects", section: "projects" },
+                  { name: "About", section: "about" },
+                  { name: "Contact", section: "contact" },
+                ].map((item, index) => (
                   <motion.li
                     key={index}
                     whileHover={{ x: 4 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <a
-                      href="#"
+                      href={`#${item.section}`}
                       className="text-neutral-400 hover:text-white transition-colors"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .getElementById(item.section)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }}
                     >
-                      {item}
+                      {item.name}
                     </a>
                   </motion.li>
                 ))}
@@ -127,9 +137,9 @@ const Footer = () => {
 
         <div className="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-neutral-500">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Vidya Bingi. All rights reserved.
           </p>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <a
               href="#"
               className="text-sm text-neutral-500 hover:text-neutral-300 transition-colors"
@@ -142,7 +152,7 @@ const Footer = () => {
             >
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.footer>
