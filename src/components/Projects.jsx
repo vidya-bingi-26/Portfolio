@@ -1,34 +1,24 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ecommerce from "../assets/images/ecommerce.png";
 
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "ONDC Buyer App",
     category: "Web Development",
-    description:
-      "A modern e-commerce solution with seamless checkout experience",
-    image: "/project1.jpg",
+    description: `Shopzia – ONDC Buyer App (Sponsored by Innobytes)
+Currently working on an ONDC-compliant buyer app using the MERN stack, sponsored by Innobytes, as part of an industry-level project. The app focuses on enhancing user experience through AI/ML-powered product recommendations, including related items and recently viewed products based on user interactions.
+
+Planned future enhancements include:
+- Image-based product search using computer vision
+- Style suggestions tailored to user’s body type and preferred color palette
+- Makeup shade recommendations based on skin tone detection
+
+The project aims to blend intelligent shopping with personalized fashion & beauty guidance.`,
+    image: ecommerce,
     link: "#",
     tags: ["React", "Node.js", "MongoDB"],
-  },
-  {
-    id: 2,
-    title: "Mobile App Design",
-    category: "UI/UX Design",
-    description: "Health tracking app with intuitive user interface",
-    image: "/project2.jpg",
-    link: "#",
-    tags: ["Figma", "Prototyping", "User Research"],
-  },
-  {
-    id: 3,
-    title: "Brand Identity",
-    category: "Visual Design",
-    description: "Complete brand identity for a tech startup",
-    image: "/project3.jpg",
-    link: "#",
-    tags: ["Logo Design", "Typography", "Brand Guidelines"],
   },
 ];
 
@@ -40,7 +30,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-24 bg-neutral-950">
-      {/* <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
@@ -74,12 +64,17 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 backdrop-blur-sm">
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r text-purple-600 mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-indigo-400 mb-2">{project.category}</p>
-                  <p className="text-neutral-300 mb-4">{project.description}</p>
+                  <p className="text-gray-600 font-semibold mb-2 tracking-wide uppercase text-sm">
+                    {project.category}
+                  </p>
+
+                  <p className="text-neutral-300 mb-4 overflow-y-auto max-h-40 pr-2 scrollbar-thin scrollbar-thumb-neutral-700 scrollbar-track-neutral-900 scrollbar-hide">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
                       <span
@@ -92,22 +87,19 @@ const Projects = () => {
                   </div>
                   <a
                     href={project.link}
-                    className="inline-flex items-center gap-2 text-white group-hover:text-indigo-400 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-white hover:text-indigo-400 transition-colors"
                   >
-                    View Case Study
                     <svg
-                      className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
                       viewBox="0 0 24 24"
+                      className="w-5 h-5"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.547-1.387-1.335-1.756-1.335-1.756-1.09-.744.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.334-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.302-.535-1.522.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.045.137 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.654.243 2.874.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.805 5.625-5.475 5.92.43.37.823 1.096.823 2.21v3.285c0 .32.192.694.8.576C20.565 21.796 24 17.297 24 12c0-6.63-5.373-12-12-12z" />
                     </svg>
+                    View on GitHub
                   </a>
                 </div>
               </div>
@@ -142,7 +134,8 @@ const Projects = () => {
             </svg>
           </a>
         </motion.div>
-      </div> */}
+      </div>
+
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
