@@ -6,6 +6,8 @@ body {
   font-family: 'Inter', sans-serif;
   color: #333;
   line-height: 1.6;
+  background-color: #050816; /* Dark background for the entire site */
+  color: #ffffff;
 }
 
 .container {
@@ -28,4 +30,118 @@ html {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@layer components {
+  .black-gradient {
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .hover\:shadow-card:hover {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hover\:bg-black-200:hover {
+    background-color: #1a1a1a;
+  }
+  
+  /* Dark theme styles for projects section */
+  .bg-tertiary {
+    background-color: #151030;
+  }
+  
+  .text-secondary {
+    color: #aaa6c3;
+  }
+  
+  .card-img_hover {
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+  
+  .card-img_hover:hover {
+    opacity: 1;
+  }
+  
+  .bg-primary {
+    background-color: #915eff;
+  }
+  
+  .project-card {
+    background-color: #1d1836;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 0 25px rgba(145, 94, 255, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Read more button styling */
+  .read-more-btn {
+    color: #915eff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 8px;
+  }
+  
+  .read-more-btn:hover {
+    color: #804dee;
+    text-decoration: underline;
+  }
+  
+  /* Description text styling */
+  .description-text {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+}
+
+.blue-text-gradient {
+  background: linear-gradient(90deg, #2196f3, #4fc3f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.green-text-gradient {
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: linear-gradient(90deg, #ff4081, #f48fb1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orange-text-gradient {
+  background: linear-gradient(90deg, #ff9800, #ffb74d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Additional dark theme styles */
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
 }
